@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
+@extends('layouts.main')
 
-    {{ $movies->title }}
+@section('title', 'Movies')
 
-</body>
-</html>
+@section('main-content')
+
+    <div class="container d-flex flex-wrap justify-content-center">
+
+        @forelse ($movies as $movie)
+        
+            <div class="movie-card">
+                <h5>{{ $movie->title }}</h2>
+                <h6>{{ $movie->original_title }}</h6>
+                <ul>
+                    <li>{{ $movie->nationality }}</li>
+                    <li>{{ $movie->date }}</li>
+                    <li>{{ $movie->vote }}</li>
+                </ul>
+            </div>
+        @empty
+        
+        @endforelse
+
+    </div>
+
+@endsection

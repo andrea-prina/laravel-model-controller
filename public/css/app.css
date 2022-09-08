@@ -10855,3 +10855,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.movie-card {
+  width: calc((100% - 50px) / 5);
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+.movie-card h5, .movie-card .h5, .movie-card h6, .movie-card .h6 {
+  font-weight: bold;
+}
