@@ -4,7 +4,7 @@
 
 @section('main-content')
 
-    <div class="container d-flex flex-wrap justify-content-center">
+    <div class="d-flex flex-wrap justify-content-center">
 
         @forelse ($movies as $movie)
         
